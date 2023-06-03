@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_terms_of_use"
-        android:name="com.with.ink.ink_android.feature.terms.TermsOfUseFragment"
+        android:name="com.with.ink.ink_android.feature.join.TermsOfUseFragment"
         android:label="TermsOfUse"
         tools:layout="@layout/fragment_terms_of_use" >
         <action
