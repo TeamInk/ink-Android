@@ -1,43 +1,41 @@
 package com.with.ink.ink_android
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.with.ink.ink_android.ui.theme.Ink_AndroidTheme
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.with.ink.ink_android.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : ComponentActivity() {
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
+    private lateinit var navHostFragment: NavHostFragment
+    private lateinit var navController: NavController
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Ink_AndroidTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
+        setContentView(binding.root)
+
+        initNavigationBar()
     }
-}
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    Ink_AndroidTheme {
-        Greeting("Android")
+    private fun initNavigationBar() {
+        navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fcvMain) as NavHostFragment
+        navController = navHostFragment.navController
+//        navController.addOnDestinationChangedListener { _, destination, _ ->
+//            if (destination.id == R.id.navigation_onboard || destination.id == R.id.navigation_terms_of_use
+//            ) {
+//                binding.btnvView.visibility = View.GONE
+//            } else {
+//                binding.btnvView.visibility = View.VISIBLE
+//            }
+//        }
+//
+//        binding.btnvView.setupWithNavController(navController)
     }
 }

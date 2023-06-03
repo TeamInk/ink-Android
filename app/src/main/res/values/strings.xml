@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Ink_Android</string>
+
+    <!-- 공통 -->
+    <string name="next">다음</string>
+
+    <!-- 온보딩 -->
+    <string name="login_kakao">카카오 로그인</string>
+    <string name="login_google">구글 로그인</string>
+
+    <!-- 이용 약관 -->
+    <string name="terms_of_use_title">먼저 이용 약관을 읽고\n동의해주세요.</string>
+    <string name="terms_of_use_all_comfirm">모든 약관을 읽었으며, 이에 동의해요.</string>
+    <string name="terms_of_use_term_1">[필수] 서비스 이용약관 동의</string>
+    <string name="terms_of_use_term_2">[필수] 개인정보 수집/이용 동의</string>
+
 </resources>
