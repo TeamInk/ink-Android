@@ -1,4 +1,4 @@
-package com.with.ink.ink_android.feature.join
+package com.with.ink.ink_android.feature.onboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.with.ink.ink_android.databinding.FragmentOnboardBinding
-import com.with.ink.ink_android.databinding.FragmentTermsOfUseDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -18,23 +16,19 @@ import dagger.hilt.android.AndroidEntryPoint
  * @desc
  */
 @AndroidEntryPoint
-class TermsOfUseDetailFragment : Fragment() {
-    private val binding by lazy { FragmentTermsOfUseDetailBinding.inflate(layoutInflater) }
+class OnBoardNicknameFragment : Fragment() {
+    private val binding by lazy { FragmentOnboardBinding.inflate(layoutInflater) }
+    private val viewModel by viewModels<OnBoardViewModel>()
+
+    private fun setUI() {
+        // TODO: 카카오 로그인 요청
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        initUI()
         return binding.root
-    }
-
-    private fun initUI() {
-        // TODO: 웹뷰 연결
-
-        binding.ivClose.setOnClickListener {
-            findNavController().popBackStack()
-        }
     }
 }

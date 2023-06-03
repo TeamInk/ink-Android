@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="20dp">
+
+    <TextView
+        android:id="@+id/tvTermsOfUseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/omyupretty_regular"
+        android:lineHeight="38sp"
+        android:text="@string/terms_of_use_title"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cstTerms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/bg_border_e2e2e2"
+        app:layout_constraintTop_toBottomOf="@id/tvTermsOfUseTitle">
+
+        <ImageView
+            android:id="@+id/ivAllAgree"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/selector_checkbox"
+            app:layout_constraintBottom_toBottomOf="@id/vDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvAllAgree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="23dp"
+            android:text="@string/terms_of_use_all_comfirm"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAllAgree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivAllAgree"
+            app:layout_constraintTop_toTopOf="@+id/ivAllAgree" />
+
+        <View
+            android:id="@+id/vDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="59dp"
+            android:background="#e2e2e2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivTerm1Agree"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/selector_checkbox"
+            app:layout_constraintBottom_toTopOf="@id/ivTerm2Agree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vDivider" />
+
+        <TextView
+            android:id="@+id/tvTerm1Agree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="7dp"
+            android:text="@string/terms_of_use_term_1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTerm1Agree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivTerm1Detail"
+            app:layout_constraintStart_toEndOf="@id/ivTerm1Agree"
+            app:layout_constraintTop_toTopOf="@+id/ivTerm1Agree" />
+
+        <ImageView
+            android:id="@+id/ivTerm1Detail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/icons_chevron_more_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTerm1Agree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivTerm1Agree" />
+
+        <ImageView
+            android:id="@+id/ivTerm2Agree"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/selector_checkbox"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTerm2Agree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="7dp"
+            android:text="@string/terms_of_use_term_2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTerm2Agree"
+            app:layout_constraintEnd_toStartOf="@id/ivTerm2Detail"
+            app:layout_constraintStart_toEndOf="@id/ivTerm2Agree"
+            app:layout_constraintTop_toTopOf="@+id/ivTerm2Agree" />
+
+
+        <ImageView
+            android:id="@+id/ivTerm2Detail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/icons_chevron_more_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ivTerm2Agree"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivTerm2Agree" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/selector_button_bg"
+        android:text="@string/next"
+        android:textColor="@drawable/selector_button_text_color"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
